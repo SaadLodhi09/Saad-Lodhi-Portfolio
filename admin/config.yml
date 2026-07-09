@@ -23,7 +23,8 @@ collections:
               - { label: "Hero Badge", name: "hero_badge", widget: "string", required: false }
               - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
               - { label: "Hero Subtitle", name: "hero_sub", widget: "text", required: false }
-              - { label: "Tools Strip Label", name: "tools_label", widget: "string", required: false }
+              - { label: "Tools Heading", name: "tools_heading", widget: "string", required: false }
+              - { label: "Tools Subtitle", name: "tools_sub", widget: "text", required: false }
               - { label: "Skills Eyebrow", name: "skills_eyebrow", widget: "string", required: false }
               - { label: "Skills Heading", name: "skills_heading", widget: "string", required: false }
               - { label: "Skills Subtitle", name: "skills_sub", widget: "text", required: false }
