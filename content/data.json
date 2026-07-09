@@ -48,6 +48,14 @@
       "details": "As the co-founder and lead designer of Epilytix, I needed to build a brand identity that felt tech-forward but distinctly human. The goal was to break away from standard, cold corporate tech aesthetics and craft a vibrant, premium ecosystem that signals innovation, fluid problem-solving, and authority in the software space.\n\nCentered on the fluid \"epx\" monogram to symbolize seamless data flow, this versatile brand identity was stress-tested across diverse physical and digital mockups. The resulting adaptable design system perfectly positions Epilytix as an agile, cutting-edge software powerhouse."
     },
     {
+      "title": "Isabeau Key Art",
+      "category": "film",
+      "image": "/assets/uploads/isabeau-danjou-2.jpg",
+      "featured": true,
+      "subtitle": "Dark Fantasy by Butterfly Entertainment",
+      "details": "To capture the epic scale of a high-end dark fantasy, I designed a character-driven key art piece featuring a layered triangular composition. The layout anchors on a piercing-eyed protagonist in the foreground, using symbolic wildlife, hooded figures, and a soaring raven to build narrative depth. Utilizing a desaturated, misty palette of cold blues and deep grays, the moody atmosphere makes the subtle eye glows and intricate, chiseled stone typography pop with a premium, high-fantasy aesthetic."
+    },
+    {
       "title": "Mind in Chaos",
       "category": "film",
       "image": "/assets/uploads/a-mind-in-chaos-horror-6.png",
@@ -64,14 +72,6 @@
       "details": "To transform the Nissan GT-R into a theatrical experience, I built a dynamic vertical composition that stacks the vehicle's best design elements to tell a story of raw speed. Using a hyper-saturated, molten orange palette wrapped in heavy environmental smoke and golden backlighting, I gave the piece an aggressive, untamed edge. Grounding the car on a dark, wet asphalt texture allowed me to build high-contrast reflections, creating an incredibly premium and cinematic feel."
     },
     {
-      "title": "Isabeau Key Art",
-      "category": "film",
-      "image": "/assets/uploads/isabeau-danjou-2.jpg",
-      "featured": true,
-      "subtitle": "Dark Fantasy by Butterfly Entertainment",
-      "details": "To capture the epic scale of a high-end dark fantasy, I designed a character-driven key art piece featuring a layered triangular composition. The layout anchors on a piercing-eyed protagonist in the foreground, using symbolic wildlife, hooded figures, and a soaring raven to build narrative depth. Utilizing a desaturated, misty palette of cold blues and deep grays, the moody atmosphere makes the subtle eye glows and intricate, chiseled stone typography pop with a premium, high-fantasy aesthetic."
-    },
-    {
       "title": "Black Luchador",
       "category": "posters",
       "image": "/assets/uploads/black-luchador-2.png",
@@ -79,18 +79,18 @@
       "subtitle": "Sports Entertainment & Promo Design"
     },
     {
-      "title": "Flora Elysia",
-      "category": "social",
-      "image": "/assets/uploads/flora-4.jpg",
-      "featured": false,
-      "subtitle": "Female Perfume Advertisement"
-    },
-    {
       "title": "Messi Fan Art",
       "category": "posters",
       "image": "/assets/uploads/messi-poster.jpg",
       "featured": false,
       "subtitle": "Cinematic Sports Key Art"
+    },
+    {
+      "title": "Flora Elysia",
+      "category": "social",
+      "image": "/assets/uploads/flora-4.jpg",
+      "featured": false,
+      "subtitle": "Female Perfume Advertisement"
     },
     {
       "title": "Soccer Jersey",
