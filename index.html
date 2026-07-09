@@ -7,7 +7,7 @@
 <meta name="description" content="Saad Lodhi — Freelance graphic designer specializing in posters, social media creatives, digital art, pitch decks, and film posters.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@600;800&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --void:#0a0a10;
@@ -66,9 +66,9 @@
     font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.2em;
     text-transform:uppercase; color:var(--orchid-soft); display:inline-flex; align-items:center; gap:10px;
   }
-  .eyebrow::before{content:""; width:20px; height:1px; background:var(--orchid-soft); display:inline-block;}
+  .eyebrow::before{content:none;}
 
-  h1,h2,h3{font-family:'Anton',Impact,sans-serif; letter-spacing:0.02em; font-weight:400;}
+  h1,h2,h3{font-family:'Exo 2',sans-serif; font-weight:600; letter-spacing:0.01em;}
   .grad-text{
     background:linear-gradient(100deg, var(--orchid-soft) 10%, var(--pink) 55%, var(--orchid-soft) 90%);
     -webkit-background-clip:text; background-clip:text; color:transparent;
@@ -80,7 +80,7 @@
   /* ---------- NAV ---------- */
   header{position:fixed; top:0; left:0; right:0; z-index:50; backdrop-filter:blur(14px); background:rgba(10,10,16,0.6); border-bottom:1px solid var(--line);}
   .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 20px; max-width:1180px; margin:0 auto;}
-  .logo{font-family:'Orbitron',sans-serif; font-weight:800; font-size:16px; letter-spacing:0.04em;}
+  .logo{font-family:'Audiowide',sans-serif; font-weight:400; font-size:15px; letter-spacing:0.04em;}
   .logo span{color:var(--pink);}
   .nav-links{display:none; gap:6px; font-size:13.5px; font-weight:600; position:relative;}
   .nav-links a{color:var(--muted); transition:color .25s ease; position:relative; z-index:2; padding:9px 16px; display:inline-block; border-radius:999px;}
@@ -91,7 +91,7 @@
   .burger span{width:22px; height:2px; background:var(--text); display:block;}
   .mobile-menu{position:fixed; inset:0; background:rgba(10,10,16,0.98); z-index:55; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:26px; transform:translateY(-100%); transition:transform .35s ease;}
   .mobile-menu.open{transform:translateY(0);}
-  .mobile-menu a{font-family:'Anton',sans-serif; font-size:26px; color:var(--text);}
+  .mobile-menu a{font-family:'Exo 2',sans-serif; font-weight:700; font-size:26px; color:var(--text);}
   @media(min-width:768px){
     .nav{padding:16px 24px;}
     .logo{font-size:19px;}
@@ -107,8 +107,8 @@
   .hero-glow{position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(155,77,255,0.4), rgba(195,77,255,0.18) 45%, transparent 72%); filter:blur(40px); z-index:1; bottom:0;}
   .hero-cutout{position:relative; z-index:2; height:100%; width:auto; max-width:100%; object-fit:contain; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5));}
   .hero-cutout-placeholder{position:relative; z-index:2; height:80%; aspect-ratio:3/4; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px; color:var(--muted); text-align:center; font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.04em; border:1.5px dashed var(--line); border-radius:20px; padding:20px;}
-  .hero-cutout-placeholder .initials{font-family:'Anton',sans-serif; font-size:54px; background:linear-gradient(120deg,var(--orchid-soft),var(--pink)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-  .hero-copy h1{font-family:'Orbitron',sans-serif; font-weight:800; font-size:clamp(42px,13vw,88px); line-height:1.08; margin:14px 0 18px; letter-spacing:0.01em;}
+  .hero-cutout-placeholder .initials{font-family:'Audiowide',sans-serif; font-weight:400; font-size:48px; background:linear-gradient(120deg,var(--orchid-soft),var(--pink)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero-copy h1{font-family:'Audiowide',sans-serif; font-weight:400; font-size:clamp(48px,15vw,104px); line-height:1.05; margin:14px 0 18px; letter-spacing:0.005em;}
   .hero-copy h1 .grad-text{-webkit-text-stroke:0;}
   .hero-sub{font-size:16px; color:var(--muted); max-width:440px; line-height:1.6; margin:0 auto 20px;}
   .badge-tag{display:inline-block; background:var(--panel); border:1px solid var(--line); padding:8px 18px; border-radius:999px; font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:var(--orchid-soft); white-space:nowrap; margin-bottom:22px;}
@@ -151,12 +151,12 @@
 
   /* ---------- SECTION HEADS ---------- */
   .section-head{margin-bottom:40px; max-width:640px;}
-  .section-head h2{font-size:clamp(36px,9vw,58px); margin-top:12px; line-height:1.12; letter-spacing:0.015em;}
+  .section-head h2{font-weight:800; font-size:clamp(32px,8.5vw,54px); margin-top:12px; line-height:1.18; letter-spacing:0.005em;}
   .section-head p{color:var(--muted); margin-top:14px; font-size:15px; line-height:1.6;}
   section.padded{padding:80px 0;}
   @media(min-width:768px){
     .section-head{margin-bottom:56px;}
-    .section-head h2{line-height:1.08;}
+    .section-head h2{line-height:1.12;}
     section.padded{padding:120px 0;}
   }
 
@@ -165,10 +165,10 @@
   .ticket{position:relative; background:linear-gradient(165deg,var(--panel),var(--panel-2)); border:1px solid var(--line); border-radius:16px; padding:26px 22px; transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease; overflow:hidden;}
   .ticket:hover{transform:translateY(-5px); border-color:rgba(155,77,255,0.4); box-shadow:0 20px 50px rgba(0,0,0,0.4), var(--glow);}
   .ticket .genre{font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink); background:rgba(195,77,255,0.08); border:1px solid rgba(195,77,255,0.25); padding:5px 11px; border-radius:999px; display:inline-block; margin-bottom:16px;}
-  .ticket h3{font-size:25px; margin-bottom:8px; letter-spacing:0.02em;}
+  .ticket h3{font-size:22px; margin-bottom:8px; letter-spacing:0.005em; font-weight:700;}
   .ticket p{color:var(--muted); font-size:14px; line-height:1.6;}
   @media(min-width:640px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
-  @media(min-width:1024px){ .skills-grid{grid-template-columns:repeat(3,1fr); gap:22px;} .ticket h3{font-size:28px;} }
+  @media(min-width:1024px){ .skills-grid{grid-template-columns:repeat(3,1fr); gap:22px;} .ticket h3{font-size:24px;} }
 
   /* ---------- SLIDESHOW ---------- */
   .slideshow{position:relative; width:100%; border-radius:24px; border:1px solid var(--line); margin-bottom:50px; background:linear-gradient(160deg,var(--panel),var(--panel-2)); padding:50px 46px 56px;}
@@ -181,7 +181,7 @@
   .slide-media .art{position:absolute; inset:0; background-size:cover; background-position:center;}
   .slide-content{padding:22px 4px 0; display:flex; flex-direction:column; justify-content:center;}
   .slide-content .tag{font-family:'Space Mono',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--orchid-soft); margin-bottom:10px; display:block;}
-  .slide-content h3{font-size:clamp(24px,6vw,34px); margin-bottom:10px; letter-spacing:0.015em;}
+  .slide-content h3{font-size:clamp(22px,5.5vw,30px); margin-bottom:10px; letter-spacing:0.005em; font-weight:700;}
   .slide-content .subtitle{font-family:'Manrope',sans-serif; font-size:15px; font-weight:600; color:var(--text); line-height:1.5; margin-bottom:10px;}
   .slide-content .details{font-family:'Manrope',sans-serif; font-size:12.5px; font-weight:300; color:var(--muted); line-height:1.65;}
   .slide-arrow{position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); background:rgba(10,10,16,0.6); color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); z-index:5; font-size:18px;}
@@ -196,7 +196,7 @@
     .slide{flex-direction:row; align-items:center;}
     .slide-media{width:38%; aspect-ratio:210/297; flex-shrink:0;}
     .slide-content{flex:1; padding:0 20px 0 50px;}
-    .slide-content h3{font-size:clamp(28px,3.4vw,40px);}
+    .slide-content h3{font-size:clamp(24px,3vw,34px);}
     .slide-content .subtitle{font-size:17px;}
     .slide-content .details{font-size:13.5px; max-width:420px;}
     .slide-arrow{width:46px; height:46px; font-size:20px;}
@@ -215,7 +215,7 @@
   .poster-card .shade{position:absolute; inset:0; background:linear-gradient(0deg, rgba(10,10,16,0.9), transparent 55%);}
   .poster-card .meta{position:absolute; bottom:0; left:0; right:0; padding:12px;}
   .poster-card .meta span{font-family:'Space Mono',monospace; font-size:9px; color:var(--orchid-soft); letter-spacing:0.08em;}
-  .poster-card .meta h4{font-family:'Anton',sans-serif; font-size:16px; margin-top:3px; letter-spacing:0.02em;}
+  .poster-card .meta h4{font-size:15px; margin-top:3px; letter-spacing:0.005em; font-weight:700;}
   .poster-card:hover{transform:translateY(-6px) scale(1.02); box-shadow:0 20px 40px rgba(0,0,0,0.5), var(--glow);}
   .poster-card.hide{display:none;}
   @media(min-width:768px){
@@ -238,12 +238,12 @@
   /* ---------- ABOUT ---------- */
   .about-grid{display:flex; flex-direction:column; gap:36px; align-items:center;}
   .about-photo{aspect-ratio:4/5; width:100%; max-width:280px; border-radius:18px; background:linear-gradient(160deg,var(--panel),var(--panel-2)); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; box-shadow:0 0 40px rgba(155,77,255,0.15);}
-  .about-photo .initials{font-family:'Anton',sans-serif; font-size:60px; background:linear-gradient(120deg,var(--orchid-soft),var(--pink)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .about-photo .initials{font-family:'Audiowide',sans-serif; font-weight:400; font-size:54px; background:linear-gradient(120deg,var(--orchid-soft),var(--pink)); -webkit-background-clip:text; background-clip:text; color:transparent;}
   .about-copy p{color:var(--muted); font-size:15px; line-height:1.75; margin-bottom:18px;}
   .about-copy p strong{color:var(--text);}
   .stats-row{display:grid; grid-template-columns:1fr; gap:14px; margin-top:30px;}
   .stat{border:1px solid var(--line); border-radius:12px; padding:18px; background:rgba(255,255,255,0.015);}
-  .stat .num{font-family:'Anton',sans-serif; font-size:26px; color:var(--orchid-soft);}
+  .stat .num{font-family:'Exo 2',sans-serif; font-weight:700; font-size:26px; color:var(--orchid-soft);}
   .stat .lbl{font-family:'Space Mono',monospace; font-size:10.5px; color:var(--muted); letter-spacing:0.05em; margin-top:5px;}
   @media(min-width:768px){
     .about-grid{flex-direction:row; align-items:center; gap:60px; text-align:left;}
@@ -302,8 +302,7 @@
   <div id="spotlight"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="badge-tag" id="heroBadge">● Available for Freelance Work</span>
-      <span class="eyebrow" id="heroEyebrow" style="display:block;">Freelance Graphic Designer</span>
+      <span class="eyebrow" id="heroEyebrow" style="display:block;">Graphic Designer</span>
       <h1>SAAD<br><span class="grad-text">LODHI</span></h1>
       <p class="hero-sub" id="heroSub">I design posters, social campaigns, and pitch decks that are built to stop the scroll — 5+ years turning ideas into visuals people actually remember.</p>
       <div class="btn-row">
@@ -436,7 +435,7 @@
     </div>
     <div class="about-copy reveal">
       <span class="eyebrow" id="aboutEyebrow">About Me</span>
-      <h2 id="aboutHeading" style="margin:14px 0 20px; font-size:clamp(30px,7vw,48px);">Hi, I'm <span class="grad-text">Saad.</span></h2>
+      <h2 id="aboutHeading" style="margin:14px 0 20px; font-size:clamp(30px,7vw,48px); font-weight:800;">Hi, I'm <span class="grad-text">Saad.</span></h2>
       <p id="bio1">I'm a graphic designer with <strong>5+ years of experience</strong> across poster design, social media content, digital art, and event branding. I've spent that time freelancing on Fiverr, working with clients who needed their brand to look sharper and get noticed faster.</p>
       <p id="bio2">My approach is simple: every piece should have a <strong>clear focal point</strong>, <strong>confident typography</strong>, and a mood that fits exactly where it's going to live — whether that's a phone feed, a boardroom screen, or a cinema wall.</p>
       <p id="bio3">I'm now taking on new freelance projects directly. If you need posters, campaign creatives, or a deck that makes people lean in, let's talk.</p>
