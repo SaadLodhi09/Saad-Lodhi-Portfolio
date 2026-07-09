@@ -98,6 +98,31 @@
       "image": "/assets/uploads/soccer-jersey-2.png",
       "featured": false,
       "subtitle": "Premium Product Design"
+    },
+    {
+      "featured": false,
+      "image": "/assets/uploads/the-star-of-santa-4.jpg",
+      "category": "film",
+      "title": "Star of Santa",
+      "subtitle": "Festive Theatrical Design"
+    },
+    {
+      "featured": false,
+      "image": "/assets/uploads/broken-3.jpg",
+      "category": "film",
+      "title": "Broken Indie Film"
+    },
+    {
+      "featured": false,
+      "image": "/assets/uploads/beauty-product-design-3.jpg",
+      "title": "Skin Product Ad",
+      "category": "social"
+    },
+    {
+      "featured": false,
+      "image": "/assets/uploads/cover.jpg",
+      "title": "Kids Book Illustrations",
+      "category": "posters"
     }
   ],
   "tools": [
