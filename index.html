@@ -239,6 +239,19 @@
     .pitch-slide{height:480px;}
   }
 
+  #pitchdeck .slideshow{background:none; border:none; padding:0; border-radius:0; margin-left:-20px; margin-right:-20px; width:calc(100% + 40px);}
+  #pitchdeck .slideshow::before, #pitchdeck .slideshow::after{content:none;}
+  #pitchdeck .slides-viewport{border-radius:0;}
+  #pitchdeck .pitch-slide{height:340px;}
+  #pitchdeck .pitch-slide img{border-radius:10px;}
+  #pitchdeck .pitch-controls{display:flex; align-items:center; justify-content:center; gap:18px; margin-top:16px;}
+  #pitchdeck .slide-arrow{position:static; transform:none; opacity:0.7;}
+  #pitchdeck .slide-arrow:hover{opacity:1;}
+  #pitchdeck .slide-dots{position:static; bottom:auto; left:auto; transform:none;}
+  @media(min-width:768px){
+    #pitchdeck .pitch-slide{height:520px;}
+  }
+
   /* ---------- ABOUT ---------- */
   .about-grid{display:flex; flex-direction:column; gap:36px; align-items:center;}
   .about-photo{aspect-ratio:4/5; width:100%; max-width:280px; border-radius:18px; background:linear-gradient(160deg,var(--panel),var(--panel-2)); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; box-shadow:0 0 40px rgba(155,77,255,0.15);}
@@ -447,14 +460,16 @@
       <p id="pitchSub">A closer look at deck slides — swipe or use the arrows.</p>
     </div>
     <div class="slideshow reveal" id="pitchSlideshow">
-      <button id="pitchPrevBtn" class="slide-arrow slide-arrow-left" aria-label="Previous slide">‹</button>
       <div class="slides-viewport" id="pitchSlidesViewport">
         <div class="pitch-slides" id="pitchSlides">
           <div class="pitch-slide"><div class="pitch-placeholder">Upload your pitch deck slides through /admin → Pitch Deck Showcase — they'll appear here, any size (1080×1920 or 16:9) fits.</div></div>
         </div>
       </div>
-      <button id="pitchNextBtn" class="slide-arrow slide-arrow-right" aria-label="Next slide">›</button>
-      <div class="slide-dots" id="pitchDots"></div>
+      <div class="pitch-controls">
+        <button id="pitchPrevBtn" class="slide-arrow" aria-label="Previous slide">‹</button>
+        <div class="slide-dots" id="pitchDots"></div>
+        <button id="pitchNextBtn" class="slide-arrow" aria-label="Next slide">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -683,11 +698,11 @@
 
     if(data.hero_photo){
       var hp = document.getElementById('heroPlaceholder');
-      hp.outerHTML = '<img src="' + data.hero_photo + '" class="hero-cutout" id="heroPlaceholder">';
+      hp.outerHTML = '<img src="' + data.hero_photo + '" class="hero-cutout" id="heroPlaceholder" loading="eager" decoding="async">';
     }
     if(data.about_photo){
       var ap = document.getElementById('aboutPhoto');
-      ap.innerHTML = '<img src="' + data.about_photo + '" style="width:100%;height:100%;object-fit:cover;border-radius:18px;">';
+      ap.innerHTML = '<img src="' + data.about_photo + '" style="width:100%;height:100%;object-fit:cover;border-radius:18px;" loading="lazy" decoding="async">';
     }
     if(data.bio1) document.getElementById('bio1').innerHTML = data.bio1;
     if(data.bio2) document.getElementById('bio2').innerHTML = data.bio2;
@@ -716,7 +731,7 @@
       var withIcons = data.tools.filter(function(t){ return t.icon; });
       var marqueeEl = document.getElementById('marquee');
       var oneSet = withIcons.map(function(t){
-        return '<div class="tool-chip"><div class="tool-icon" style="background:none;"><img src="' + t.icon + '" style="width:100%;height:100%;object-fit:contain;" alt="' + (t.name||'') + '"></div></div>';
+        return '<div class="tool-chip"><div class="tool-icon" style="background:none;"><img src="' + t.icon + '" style="width:100%;height:100%;object-fit:contain;" alt="' + (t.name||'') + '" loading="lazy" decoding="async"></div></div>';
       }).join('');
       // repeat the set enough times so the strip is always comfortably wider than any screen,
       // then duplicate that whole block once more for a perfectly seamless, gap-free loop
@@ -747,7 +762,7 @@
     if(data.pitch_decks && data.pitch_decks.length && data.pitch_decks.some(function(p){ return p.image; })){
       var deckImgs = data.pitch_decks.filter(function(p){ return p.image; });
       pitchSlidesEl.innerHTML = deckImgs.map(function(p){
-        return '<div class="pitch-slide"><img src="' + p.image + '" alt="' + (p.title||'') + '"></div>';
+        return '<div class="pitch-slide"><img src="' + p.image + '" alt="' + (p.title||'') + '" loading="lazy" decoding="async"></div>';
       }).join('');
       pitchSlideItems = pitchSlidesEl.children;
       pitchCurrent = 0;
@@ -765,7 +780,7 @@
         var slidesEl2 = document.getElementById('slides');
         slidesEl2.innerHTML = featured.map(function(p){
           return '<div class="slide">' +
-            '<div class="slide-media"><div class="art" style="background:url(\'' + p.image + '\') center/cover;"></div></div>' +
+            '<div class="slide-media"><div class="art"><img src="' + p.image + '" alt="' + p.title + '" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div></div>' +
             '<div class="slide-content"><span class="tag">' + (catLabel[p.category]||'') + '</span><h3>' + p.title + '</h3>' +
             (p.subtitle ? '<p class="subtitle">' + p.subtitle + '</p>' : '') +
             (p.details ? '<p class="details">' + p.details + '</p>' : '') +
@@ -786,7 +801,7 @@
       var galleryEl = document.getElementById('gallery');
       galleryEl.innerHTML = withImages.map(function(p){
         return '<div class="poster-card reveal" data-cat="' + p.category + '">' +
-          '<div class="art" style="background:url(\'' + p.image + '\') center/cover;"></div>' +
+          '<div class="art"><img src="' + p.image + '" alt="' + p.title + '" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div>' +
           '<div class="shade"></div>' +
           '<div class="meta"><span>' + (catLabel[p.category]||'') + '</span><h4>' + p.title + '</h4></div>' +
         '</div>';
