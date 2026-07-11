@@ -98,7 +98,7 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
 .hero-grid{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:32px; }
 .hero-copy{ order:2; max-width:520px; }
 .hero-badge{ display:none; }
-.section-tag{ font-family:'Montserrat',sans-serif; font-weight:300; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:16px; }
+.section-tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:16px; }
 #heroEyebrow{ font-size:15px; font-weight:500; letter-spacing:0.18em; }
 .hero-copy h1{ font-size:clamp(52px,13vw,96px); margin-bottom:20px; line-height:0.95; }
 .hero-sub{ font-size:16px; color:var(--text-2); max-width:440px; line-height:1.7; margin:0 auto 28px; }
@@ -183,7 +183,7 @@ section.padded{ padding:80px 0; }
 .slide-media .art{ position:absolute; inset:0; }
 .slide-media .art img{ width:100%; height:100%; object-fit:cover; display:block; }
 .slide-content{ padding:24px; }
-.slide-content .tag{ font-family:'Montserrat',sans-serif; font-weight:300; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; display:block; }
+.slide-content .tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; display:block; }
 .slide-content h3{ font-size:clamp(22px,5vw,28px); margin-bottom:10px; font-weight:800; letter-spacing:0.02em; }
 .slide-content .subtitle{ font-size:14px; font-weight:500; color:var(--text); line-height:1.6; margin-bottom:8px; }
 .slide-content .details{ font-size:13px; color:var(--text-2); line-height:1.7; }
@@ -193,8 +193,11 @@ section.padded{ padding:80px 0; }
 @media(min-width:768px){
   .showcase-header{ padding:20px 32px; }
   .slide{ flex-direction:row; }
+  .slide.reverse{ flex-direction:row-reverse; }
   .slide-media{ width:38%; aspect-ratio:210/297; min-height:auto; }
   .slide-content{ flex:1; padding:40px 40px 40px 48px; display:flex; flex-direction:column; justify-content:center; }
+  .slide.reverse .slide-content{ padding:40px 48px 40px 40px; text-align:right; }
+  .slide.reverse .slide-content p{ text-align:justify; margin-left:auto; margin-right:0; }
   .slide-content h3{ font-size:clamp(24px,2.8vw,32px); }
   .slide-content .subtitle{ font-size:16px; }
   .slide-content .details{ font-size:14px; max-width:420px; }
@@ -213,7 +216,7 @@ section.padded{ padding:80px 0; }
 .poster-card .art img{ width:100%; height:100%; object-fit:cover; }
 .poster-card .shade{ position:absolute; inset:0; background:linear-gradient(0deg,rgba(11,10,18,0.85) 0%,transparent 50%); opacity:0; transition:opacity .4s; }
 .poster-card .meta{ position:absolute; bottom:0; left:0; right:0; padding:16px; transform:translateY(8px); opacity:0; transition:transform .4s,opacity .4s; }
-.poster-card .meta span{ font-family:'Montserrat',sans-serif; font-weight:300; font-size:9px; color:var(--accent); letter-spacing:0.08em; text-transform:uppercase; }
+.poster-card .meta span{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:9px; color:var(--accent); letter-spacing:0.08em; text-transform:uppercase; }
 .poster-card .meta h4{ font-family:'Clash Display',sans-serif; font-size:15px; margin-top:4px; font-weight:700; }
 .poster-card:hover{ transform:translateY(-4px); border-color:rgba(139,92,246,0.2); }
 .poster-card:hover .shade{ opacity:1; }
@@ -226,7 +229,7 @@ section.padded{ padding:80px 0; }
 .skills-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
 .ticket{ background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:28px 24px; transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .3s; }
 .ticket:hover{ transform:translateY(-3px); border-color:rgba(139,92,246,0.2); }
-.ticket .genre{ font-family:'Montserrat',sans-serif; font-weight:300; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:14px; }
+.ticket .genre{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:14px; }
 .ticket h3{ font-size:20px; margin-bottom:8px; letter-spacing:0.02em; }
 .ticket p{ color:var(--text-2); font-size:14px; line-height:1.65; }
 @media(min-width:640px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
@@ -246,6 +249,8 @@ section.padded{ padding:80px 0; }
 @keyframes marquee{ from{transform:translate3d(0,0,0);} to{transform:translate3d(-50%,0,0);} }
 
 /* ── Pitch Deck ── */
+#pitchdeck .section-head{ margin-left:auto; margin-right:0; text-align:right; }
+#pitchdeck .section-head p{ text-align:right; }
 .pitch-slides{ display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1); width:100%; }
 .pitch-slide{ min-width:100%; display:flex; align-items:center; justify-content:center; height:300px; padding:0 6px; }
 .pitch-slide img{ max-height:100%; max-width:100%; object-fit:contain; border-radius:var(--r); display:block; }
@@ -318,6 +323,7 @@ section.padded{ padding:80px 0; }
       <a href="#skills" data-nav="skills">Skills</a>
       <a href="#tools" data-nav="tools">Tools</a>
       <a href="#pitchdeck" data-nav="pitchdeck">Decks</a>
+      <a href="certs.html" data-nav="certs">Certs</a>
       <a href="about.html" data-nav="about">About</a>
       <a href="contact.html" data-nav="contact">Contact</a>
     </div>
@@ -336,6 +342,7 @@ section.padded{ padding:80px 0; }
   <a href="#skills">Skills</a>
   <a href="#tools">Tools</a>
   <a href="#pitchdeck">Decks</a>
+  <a href="certs.html">Certs</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </div>
@@ -430,7 +437,7 @@ section.padded{ padding:80px 0; }
             <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#3a1a5c,#0a0a10 70%);"></div></div>
             <div class="slide-content"><span class="tag">Film Poster</span><h3>Midnight Run</h3><p class="subtitle">Key art for an independent thriller release.</p><p class="details">Full poster set including teaser, theatrical, and social crop versions, built around a single striking hero image and restrained type treatment.</p></div>
           </div>
-          <div class="slide">
+          <div class="slide reverse">
             <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#7a1f8f,#1a0a2c 70%);"></div></div>
             <div class="slide-content"><span class="tag">Event Poster</span><h3>Launch Day</h3><p class="subtitle">Product reveal event, campaign key visual.</p><p class="details">Designed for both print and digital placement, with a modular layout that adapted cleanly to multiple formats.</p></div>
           </div>
@@ -438,7 +445,7 @@ section.padded{ padding:80px 0; }
             <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#c34dff,#1a0a2c 75%);"></div></div>
             <div class="slide-content"><span class="tag">Social Campaign</span><h3>Aurora Skincare</h3><p class="subtitle">A 6-part feed series for a product launch.</p><p class="details">Consistent visual system across the full series, balancing brand color language with clear product focus.</p></div>
           </div>
-          <div class="slide">
+          <div class="slide reverse">
             <div class="slide-media"><div class="art" style="background:linear-gradient(160deg,#5b2a9c,#0a0a10 70%);"></div></div>
             <div class="slide-content"><span class="tag">Pitch Deck</span><h3>Northline Capital</h3><p class="subtitle">Investor deck for a seed-stage raise.</p><p class="details">22-slide narrative deck covering market, product, and financials.</p></div>
           </div>
@@ -939,8 +946,9 @@ section.padded{ padding:80px 0; }
       var featured=withImages.filter(function(p){return p.featured;});
       if(featured.length){
         var sl2=document.getElementById('slides');
-        sl2.innerHTML=featured.map(function(p){
-          return '<div class="slide"><div class="slide-media"><div class="art"><img src="'+p.image+'" alt="'+p.title+'" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div></div><div class="slide-content"><span class="tag">'+(catLabel[p.category]||'')+'</span><h3>'+p.title+'</h3>'+(p.subtitle?'<p class="subtitle">'+p.subtitle+'</p>':'')+(p.details?'<p class="details">'+p.details+'</p>':'')+'</div></div>';
+        sl2.innerHTML=featured.map(function(p, idx){
+          var isReverse = (idx === 1 || idx === 3);
+          return '<div class="slide' + (isReverse ? ' reverse' : '') + '"><div class="slide-media"><div class="art"><img src="'+p.image+'" alt="'+p.title+'" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;"></div></div><div class="slide-content"><span class="tag">'+(catLabel[p.category]||'')+'</span><h3>'+p.title+'</h3>'+(p.subtitle?'<p class="subtitle">'+p.subtitle+'</p>':'')+(p.details?'<p class="details">'+p.details+'</p>':'')+'</div></div>';
         }).join('');
         var dt2=document.getElementById('dots');
         dt2.innerHTML='';
