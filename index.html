@@ -286,8 +286,9 @@ section.padded{ padding:80px 0; }
 /* ── Contact ── */
 #contact{ text-align:center; }
 #contact .section-head{ margin:0 auto 40px; text-align:center; }
-.social-grid{ display:flex; flex-wrap:nowrap; gap:10px; justify-content:center; max-width:100%; margin:0 auto; padding:16px 0; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
-.social-grid::-webkit-scrollbar{ display:none; }
+#contactHeading{ font-size:clamp(24px,7vw,48px) !important; }
+.line-wrap{ display:inline-block; white-space:nowrap; }
+.social-grid{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; max-width:100%; margin:0 auto; padding:16px 0; }
 .social-btn{ display:flex; align-items:center; gap:8px; padding:11px 16px; border-radius:10px; border:1px solid var(--line); background:rgba(255,255,255,0.02); font-weight:600; font-size:13px; white-space:nowrap; flex-shrink:0; transition:transform .3s,border-color .3s,background .3s; }
 .social-btn svg{ width:18px; height:18px; stroke:var(--accent); flex-shrink:0; }
 .social-btn img{ width:18px; height:18px; object-fit:contain; flex-shrink:0; }
@@ -562,7 +563,7 @@ section.padded{ padding:80px 0; }
   <div class="wrap">
     <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
       <span class="section-tag" id="contactEyebrow">Get In Touch</span>
-      <h2 id="contactHeading" style="text-align:center">Let's Make Something<br><span class="accent">Worth Remembering.</span></h2>
+      <h2 id="contactHeading" style="text-align:center"><span class="line-wrap">Let's Make Something</span><br><span class="accent line-wrap">Worth Remembering.</span></h2>
       <p id="contactSub" style="text-align:center">Have a project in mind? Reach out on whichever platform is easiest for you.</p>
     </div>
     <div class="social-grid reveal" style="--d:1">
