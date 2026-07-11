@@ -65,7 +65,7 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
 .mobile-menu a:hover{ color:var(--accent); }
 
 /* ── Section Tags ── */
-.section-tag{ font-family:'Montserrat',sans-serif; font-weight:300; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:inline-flex; align-items:center; gap:10px; margin-bottom:16px; }
+.section-tag{ font-family:'Montserrat',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:inline-flex; align-items:center; gap:10px; margin-bottom:16px; }
 .section-tag::before{ content:''; width:24px; height:2px; background:var(--accent); display:inline-block; }
 
 /* ── About Hero ── */
@@ -110,8 +110,9 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
 
 /* CTA section */
 .cta-section{ padding:80px 0; text-align:center; }
+.cta-section .section-tag::before{ display:none; }
 .cta-section h2{ font-size:clamp(28px,6vw,40px); margin-bottom:16px; }
-.cta-section p{ color:var(--text-2); font-size:15px; line-height:1.8; max-width:640px; margin:0 auto 32px; }
+.cta-section p{ color:var(--text-2); font-size:15px; line-height:1.8; max-width:640px; margin:0 auto 32px; text-align:center; }
 .cta-socials{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
 
 /* ── Reveal ── */
@@ -134,6 +135,7 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
       <a href="index.html#skills">Skills</a>
       <a href="index.html#tools">Tools</a>
       <a href="index.html#pitchdeck">Decks</a>
+      <a href="certs.html">Certs</a>
       <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -152,6 +154,7 @@ header{ position:fixed; top:0; left:0; right:0; z-index:100; }
   <a href="index.html#skills">Skills</a>
   <a href="index.html#tools">Tools</a>
   <a href="index.html#pitchdeck">Decks</a>
+  <a href="certs.html">Certs</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
 </div>
