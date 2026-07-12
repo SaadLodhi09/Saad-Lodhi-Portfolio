@@ -39,6 +39,7 @@ p{ text-align:justify; }
 
 /* ── Custom Cursor (desktop only) ── */
 @media(pointer:fine){
+  html, body { cursor: url('assets/uploads/custom-cursor-32.png') 16 0, auto; }
   .cursor-dot{ position:fixed; width:6px; height:6px; background:var(--accent); border-radius:50%; pointer-events:none; z-index:10000; transform:translate(-50%,-50%); mix-blend-mode:difference; will-change:transform; }
   .cursor-ring{ position:fixed; width:36px; height:36px; border:1.5px solid rgba(139,92,246,0.4); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); will-change:transform; transition:width .25s,height .25s,border-color .25s; }
   .cursor-ring.hover{ width:60px; height:60px; border-color:rgba(139,92,246,0.2); }
