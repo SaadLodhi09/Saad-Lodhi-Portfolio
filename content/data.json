@@ -85,6 +85,15 @@
       "year": "2026",
       "image": "/assets/uploads/business-analysis-basics.jpg",
       "category": "business"
+    },
+    {
+      "cert_no": "CERT 06",
+      "title": "Introduction to Web Development with ChatGPT",
+      "provider": "Simplilearn SkillUp",
+      "details": "Explored the integration of AI-assisted workflows into modern frontend development. Covered the fundamentals of building web applications using HTML, CSS, and JavaScript while leveraging ChatGPT to accelerate code generation, optimize debugging, and streamline the design-to-development pipeline.",
+      "year": "2026",
+      "image": "/assets/uploads/simplilearn-certificate.jpg.jpg",
+      "category": "design_editing"
     }
   ],
   "projects": [
