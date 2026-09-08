@@ -94,6 +94,15 @@
       "year": "2026",
       "image": "/assets/uploads/simplilearn-certificate.jpg.jpg",
       "category": "design_editing"
+    },
+    {
+      "cert_no": "07",
+      "title": "Gaming Competition - TEKKEN",
+      "provider": "SOFTEC'26",
+      "details": "Actively participated in the SOFTEC'26 TEKKEN tournament, blending competitive esports with broader technological engagement. The overall event experience provided valuable opportunities to network with software houses, observe diverse hackathons, and connect with peers across multiple tech and gaming disciplines at FAST University.",
+      "year": "2026",
+      "image": "/assets/uploads/softec26_certificate_saad_tariq_lodhi.jpg",
+      "category": "beyond_craft"
     }
   ],
   "projects": [
