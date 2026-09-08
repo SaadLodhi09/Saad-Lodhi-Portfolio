@@ -139,3 +139,4 @@ collections:
                   - { label: "ARTIFICIAL INTELLIGENCE", value: "artificial_intelligence" }
                   - { label: "DESIGN AND EDITING", value: "design_editing" }
                   - { label: "CYBER SECURITY", value: "cyber_security" }
+                  - { label: "BEYOND CRAFT", value: "beyond_craft" }
